@@ -2,7 +2,7 @@
 
 
 
-##install singularity following [this](https://github.com/WireCell/wire-cell-singularity/blob/master/singularity.org)
+## install singularity following [this](https://github.com/WireCell/wire-cell-singularity/blob/master/singularity.org)
 
  ## install cvmfs on Ubuntu
 
