@@ -1,1 +1,3 @@
-[test](https://github.com/HaiwangYu/wc-learn-notes/new/master)
+[test](https://github.com/HaiwangYu/wc-learn-notes)
+
+hello
