@@ -1,4 +1,4 @@
-#Install wire-cell with singularity container
+# Install wire-cell with singularity container
 
 This is a markdown version of Wenqiang's google doc [here](https://docs.google.com/document/d/1cXfifmLUx6UroHm66uJRzG1PEYJ7jLFNRA1LDZ7y5ls/edit), with some updates that works on July 10th 2019 for the following versions:
 
@@ -7,19 +7,19 @@ This is a markdown version of Wenqiang's google doc [here](https://docs.google.c
 - wirecell: `v0_12_3`
 - Check [this](https://cdcvs.fnal.gov/redmine/projects/larwirecell/repository) for the latest version
 
-##A) singularity and cvmfs
+## A) singularity and cvmfs
 
 Install singlularity and cvmfs following [this](https://github.com/WireCell/wire-cell-singularity).
 
-##B) wcdo
+## B) wcdo
 
 This step-by-setp guide showed an example of using wcdo.  For more, refer [this](https://github.com/WireCell/wire-cell-singularity/blob/master/wcdo.org).
 
-###B.0) Download/copy the following `wcdo.sh` script somewhere in your `$PATH` and make sure it is executable.
+### B.0) Download/copy the following `wcdo.sh` script somewhere in your `$PATH` and make sure it is executable.
 
 - [wcdo.sh](https://raw.githubusercontent.com/WireCell/wire-cell-singularity/master/wcdo.sh)
 
-###B.1) Obain and configure a singularity image
+### B.1) Obain and configure a singularity image
 
 ```bash
 mkdir -p ~/wcdo/example
@@ -35,7 +35,7 @@ wcdo_mrb_project_quals="e17:prof"
 ./wcdo-myproj.sh
 ```
 
-###B.2) install ups and wcdo
+### B.2) install ups and wcdo
 **in the singularity container**
 
 ```bash
@@ -110,7 +110,7 @@ mrbslp
 
 
 
-###B.3) Test: you should see similar results
+### B.3) Test: you should see similar results
 
 **test 1**
 
@@ -149,7 +149,7 @@ output
 
 So far, you should have a workable singularity with wirecell + larsoft.
 
-###examples of wcdo-local-myproj.rc
+### examples of wcdo-local-myproj.rc
 
 **Haiwang's**
 
