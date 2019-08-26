@@ -1,5 +1,5 @@
 
-
+Obtain the macros:
 ```bash
 mkdir sp_eval
 git clone https://github.com/HaiwangYu/wct-track-eval.git
@@ -9,6 +9,9 @@ In wct-track-eval:
 ```bash
 python test_gen_rays_pdsp.py 45 > rays_45.json
 ```
+
+make a copy of the https://github.com/HaiwangYu/wc-learn-notes/edit/master/sim-track-eval.md
+in sp_eval
 
 In sp_eval:
 ```bash
