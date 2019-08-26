@@ -10,7 +10,7 @@ In wct-track-eval:
 python test_gen_rays_pdsp.py 45 > rays_45.json
 ```
 
-make a copy of the https://github.com/HaiwangYu/wc-learn-notes/edit/master/sim-track-eval.md
+make a copy of the https://github.com/WireCell/wire-cell-cfg/
 in sp_eval
 
 In sp_eval:
