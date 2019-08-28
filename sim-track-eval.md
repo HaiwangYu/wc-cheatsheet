@@ -15,7 +15,7 @@ in sp_eval
 
 In sp_eval:
 ```bash
-jsonnet -J cfg wct-track-eval/track-eval.jsonnet -o track-eval.json && wire-cell -l stdout:info -c track-eval.json
+jsonnet -J cfg track-eval.jsonnet -o track-eval.json && wire-cell -l stdout:info -c track-eval.json
 ```
 
 Use the original field resp. to obtain the `test.root`
