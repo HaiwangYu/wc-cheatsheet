@@ -1,7 +1,9 @@
 # ssi build shim
 
+## repository
 https://github.com/BNLIF/wcp-ssi-build
 
+### step 1 source code
 ```bash
 time ./bootstrap.sh /dune/app/users/yuhw/products/
 ```
@@ -52,7 +54,10 @@ products
 │           └── wcp.table
 └── wcp-00.12.00-source.tar.bz2
 ```
-
+### step 2 build
+```bash
+time ./build_wcp.sh /dune/app/users/yuhw/products e17 prof
+```
 
 # other method
 ## Brett's macro
