@@ -59,6 +59,38 @@ products
 time ./build_wcp.sh /dune/app/users/yuhw/products e17 prof
 ```
 
+retuls:
+```bash
+Finished building wcp v00_12_00
+wcp is installed at wcp/v00_12_00/Linux64bit+2.6-2.12-e17-prof
+
+real	6m30.515s
+user	0m6.954s
+sys	0m3.230s
+```
+tree:
+```bash
+wcp
+├── v00_12_00
+│   ├── Linux64bit+2.6-2.12-e17-prof
+│   │   ├── bin
+│   │   ├── include
+│   │   ├── lib
+│   │   ├── lib64
+│   │   └── wcp-v00_12_00
+│   ├── autobuild.sh
+│   ├── build_wcp.sh
+│   ├── fakedb
+│   │   └── wcp
+│   ├── tar
+│   │   └── wcp-v00_12_00.tar.bz2
+│   └── ups
+│       └── wcp.table
+└── v00_12_00.version
+```
+
+
+
 # other method
 ## Brett's macro
 https://github.com/brettviren/waftools/blob/master/create-ups-product.sh
