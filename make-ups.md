@@ -13,6 +13,44 @@ sys	0m3.491s
 ```
 tree
 ```
+products
+├── ssibuildshims
+│   ├── v1_04_13
+│   │   ├── bin
+│   │   │   ├── declare_product
+│   │   │   ├── define_basics
+│   │   │   ├── download_file
+│   │   │   ├── fake_declare_product
+│   │   │   ├── fix_macos_lib_symbols
+│   │   │   ├── get_os_platform
+│   │   │   ├── get_product_dir
+│   │   │   ├── get_ups_setup_dir
+│   │   │   ├── latest_version
+│   │   │   ├── make_distribution_tarball
+│   │   │   ├── make_source_code_base
+│   │   │   ├── make_source_code_distribution
+│   │   │   ├── make_source_code_tarball
+│   │   │   ├── ncores
+│   │   │   ├── process_qualifiers
+│   │   │   ├── setup_cmake
+│   │   │   ├── setup_python
+│   │   │   └── ssi_functions
+│   │   ├── templates
+│   │   │   └── bootstrap.sh.template
+│   │   └── ups
+│   │       └── ssibuildshims.table
+│   └── v1_04_13.version
+│       └── NULL_
+├── ssibuildshims-1.04.13-noarch.tar.bz2
+├── wcp
+│   └── v00_12_00
+│       ├── autobuild.sh
+│       ├── build_wcp.sh
+│       ├── tar
+│       │   └── wcp-v00_12_00.tar.bz2
+│       └── ups
+│           └── wcp.table
+└── wcp-00.12.00-source.tar.bz2
 ```
 
 
