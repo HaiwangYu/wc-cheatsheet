@@ -89,6 +89,14 @@ wcp
 └── v00_12_00.version
 ```
 
+mrb test build
+```bash
+mrb newDev -v v08_34_00 -q e17:prof
+source localProducts_larsoft_v08_34_00_e17_prof/setup
+cd $MRB_SOURCE
+mrb g uboone_suite
+```
+
 
 
 # other method
