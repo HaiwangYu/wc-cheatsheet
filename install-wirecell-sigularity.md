@@ -41,7 +41,7 @@ wcdo_mrb_project_quals="e17:prof"
 ```bash
 source /cvmfs/dune.opensciencegrid.org/products/dune/setup_dune.sh
 path-prepend $wcdo_ups_products PRODUCTS
-wcdo-mrb-init
+wcdo-mrb-init # call mrb newDev if localsetup doesn't exist
 ```
 output
 ```bash
