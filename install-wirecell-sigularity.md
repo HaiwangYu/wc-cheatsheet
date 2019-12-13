@@ -69,7 +69,7 @@ Now, start committing on your feature. When done, use:
 **build wirecell**
 
 ```bash
-wcdo-ups-declare wirecell wctdev
+wcdo-ups-declare wirecell wctdev # generate table file according to current dependency tree
 setup wirecell wctdev -q e17:prof
 
 wcdo-ups-wct-configure-source
