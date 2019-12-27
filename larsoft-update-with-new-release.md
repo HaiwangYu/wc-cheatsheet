@@ -16,6 +16,7 @@ source localProducts_larsoft_v08_32_00_e17_prof/setup
 Deal with source, e.g. pull off new branches, merger conflicts, etc.
 ```bash
 git flow feature start yuhw_dev master
+git checkout tags/v08_09_03 -b yuhw_v08_09_03
 # modify source e.g. the product_deps file
 ```
 
