@@ -1,3 +1,6 @@
+How do the nv option and nvidia/cuda* containers interact?
+https://github.com/sylabs/singularity/issues/2421
+
 ## nvidia driver
 
 https://github.com/NVIDIA/libnvidia-container
@@ -6,9 +9,9 @@ https://github.com/NVIDIA/libnvidia-container
 /usr/lib/x86_64-linux-gnu/
 ```
 
-## cuda
+## cuda driver
 bind
 
-## cuDNN
+## cuda tookit cuDNN
 
 ## libtorch
