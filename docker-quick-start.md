@@ -24,6 +24,8 @@ singularity pull docker://yuhw/hello:firsttry
 singularity run hello_firsttry.sif
 ```
 
+## Pushing and Pulling to and from Docker Hub
 
+https://ropenscilabs.github.io/r-docker-tutorial/04-Dockerhub.html
 
 
