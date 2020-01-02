@@ -25,4 +25,7 @@ https://github.com/NVIDIA/libnvidia-container
 
 ## cuDNN
 
-## libtorch
+## LibTorch
+
+1.3.0 compatible with glibc 2.17
+https://download.pytorch.org/libtorch/cu101/libtorch-cxx11-abi-shared-with-deps-1.3.0.zip
