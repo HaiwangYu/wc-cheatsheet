@@ -2,6 +2,10 @@
 
 https://sylabs.io/guides/3.5/user-guide/gpu.html
 
+```
+singularity exec --nv
+```
+
 ## How do the nv option and nvidia/cuda* containers interact?
 
 https://github.com/sylabs/singularity/issues/2421
