@@ -24,6 +24,18 @@ singularity pull docker://yuhw/hello:firsttry
 singularity run hello_firsttry.sif
 ```
 
+```
+docker run \
+-it \
+--rm \
+-v /home/yuhw/Downloads/:/Downloads \
+yuhw/sl7:firsttry
+```
+
+```
+docker exec -it 05625508b0d4 bash
+```
+
 ## Pushing and Pulling to and from Docker Hub
 
 https://ropenscilabs.github.io/r-docker-tutorial/04-Dockerhub.html
