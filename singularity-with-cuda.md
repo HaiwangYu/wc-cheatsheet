@@ -24,6 +24,10 @@ https://github.com/NVIDIA/libnvidia-container
 ```
 
 ## cuDNN
+http://www.askaswiss.com/2019/01/how-to-install-cuda-9-cudnn-7-ubuntu-18-04.html
+
+https://developer.nvidia.com/compute/machine-learning/cudnn/secure/7.6.5.32/Production/10.1_20191031/cudnn-10.1-linux-x64-v7.6.5.32.tgz
+https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.6.2.24/prod/10.1_20190719/cudnn-10.1-linux-x64-v7.6.2.24.tgz
 
 ## LibTorch
 
