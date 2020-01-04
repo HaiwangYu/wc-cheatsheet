@@ -20,8 +20,8 @@ docker push yuhw/hello
 Visity https://hub.docker.com/ to check
 
 ```
-singularity pull docker://yuhw/hello:firsttry
-singularity run hello_firsttry.sif
+singularity pull docker://yuhw/sl7:cuda10.1
+singularity run sl7_cuda10.1.sif
 ```
 
 ```
@@ -34,6 +34,9 @@ yuhw/sl7:firsttry
 
 ```
 docker exec -it 05625508b0d4 bash
+docker commit -m "cuda toolkit 10.1" aaaae38c850a yuhw/sl7:cuda10.1
+docker image push yuhw/sl7
+docker rm $(docker ps -a -q) #rm all stopped containers
 ```
 
 ## Pushing and Pulling to and from Docker Hub
