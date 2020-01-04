@@ -7,21 +7,20 @@ https://www.howtoforge.com/tutorial/how-to-create-docker-images-with-dockerfile/
 ```
 git clone https://github.com/WireCell/wire-cell-containers.git
 docker build -t hello wire-cell-containers/docker/debian/
-docker images
 ```
 
 ```
 docker login --username=yuhw
 docker images
-docker tag b47edf827dcb yuhw/hello:firsttry
-docker push yuhw/hello
+docker tag b47edf827dcb yuhw/sl7:cuda10.1
+docker push yuhw/sl7:cuda10.1
 ```
 
 Visity https://hub.docker.com/ to check
 
 ```
 singularity pull docker://yuhw/sl7:cuda10.1
-singularity run sl7_cuda10.1.sif
+singularity run --nv sl7_cuda10.1.sif
 ```
 
 ```
@@ -29,7 +28,7 @@ docker run \
 -it \
 --rm \
 -v /home/yuhw/Downloads/:/Downloads \
-yuhw/sl7:firsttry
+yuhw/sl7:cuda10.1
 ```
 
 ```
