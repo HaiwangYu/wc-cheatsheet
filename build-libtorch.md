@@ -25,7 +25,7 @@ that manually.
 python ../tools/build_libtorch.py
 ```
 
-Takes about 1 hour. Building `.cu` in Coffe2 is really slow
+Takes about 1 hour. Compiling `.cu` in Coffe2 is really slow
 
 ## Also refer to a post:
 https://discuss.pytorch.org/t/glibc-linker-errors-when-linking-against-libtorch-on-ubuntu-18-04/55183/11
