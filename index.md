@@ -1,4 +1,3 @@
-# Wire-cell lean note
+# Wire-cell Cheatsheet
 
- - [Install singularity and cvmfs on Ubuntu 18.04](https://github.com/HaiwangYu/wc-learn-notes/blob/master/install-cvmfs-singularity.md)
- - [install wire-cell using singularity and cvmfs](https://github.com/HaiwangYu/wc-learn-notes/blob/master/install-wirecell-sigularity.md)
+Browse using sidebar or search.

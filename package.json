@@ -1,0 +1,17 @@
+{
+  "name": "wire-cell-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node_modules/.bin/vuepress dev",
+    "build": "node_modules/.bin/vuepress build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^1.0.2"
+  }
+}

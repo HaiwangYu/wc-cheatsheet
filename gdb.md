@@ -1,3 +1,5 @@
+# gdb
+
 ```bash
 gdb --args wire-cell -l stdout:trace -c tbb.json
 ```
