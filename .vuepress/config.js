@@ -17,6 +17,7 @@ module.exports = {
     ],
     sidebar: {
       '/': [
+        'cuda-dev',
          'rootlogon',
          'build-libtorch',
          'docker-quick-start',
