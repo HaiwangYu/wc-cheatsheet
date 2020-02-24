@@ -1,4 +1,4 @@
-name: CI
+name: dotify
 
 on: [push]
 
@@ -9,11 +9,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Run a one-line script
+    - name: Hello
       run: echo Hello, world!
-    - name: Run a multi-line script
+    - name: install graphviz
       run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+        apt-get install graphviz
     - name: dot
       run: dot -?
