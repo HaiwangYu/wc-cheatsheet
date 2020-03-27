@@ -2,10 +2,10 @@
 
 This is a markdown version of Wenqiang's google doc [here](https://docs.google.com/document/d/1cXfifmLUx6UroHm66uJRzG1PEYJ7jLFNRA1LDZ7y5ls/edit), with some updates that works on July 10th 2019 for the following versions:
 
-- larsoft version: `v08_24_00`
-- larwirecell version: `v08_05_08`
+- larsoft version: `v08_47_00`
+- larwirecell version: `v08_12_06`
 - wirecell: `v0_12_3`
-- Check [this](https://cdcvs.fnal.gov/redmine/projects/larwirecell/repository) for the latest version
+- Check [this](https://cdcvs.fnal.gov/redmine/projects/larsoft/wiki/LArSoft_release_list) for the latest version
 
 ## A) singularity and cvmfs
 
@@ -30,8 +30,8 @@ wcdo.sh get-image sl7krb
 wcdo.sh make-project myproj sl7krb
 vim wcdo-local-myproj.rc
 wcdo_mrb_project_name="larsoft"
-wcdo_mrb_project_version="v08_24_00"
-wcdo_mrb_project_quals="e17:prof"
+wcdo_mrb_project_version="v08_47_00"
+wcdo_mrb_project_quals="e19:prof"
 ./wcdo-myproj.sh
 ```
 
@@ -46,14 +46,14 @@ wcdo-mrb-init # call mrb newDev if localsetup doesn't exist
 output
 ```bash
 IMPORTANT: You must type
-    source /wcdo/src/mrb/localProducts_larsoft_v08_24_00_e17_prof/setup
+    source /wcdo/src/mrb/localProducts_larsoft_v08_24_00_e19_prof/setup
 NOW and whenever you log in
 ```
 
 chekcout a feature branch
 
 ```bash
-wcdo-mrb-add-source larwirecell v080508 v08_05_08
+wcdo-mrb-add-source larwirecell v081206 v08_12_06
 ```
 output
 ```bash
@@ -70,15 +70,26 @@ Now, start committing on your feature. When done, use:
 
 ```bash
 wcdo-ups-declare wirecell wctdev # generate table file according to current dependency tree
-setup wirecell wctdev -q e17:prof
+setup wirecell wctdev -q e19:prof
+```
 
+The most recent wire-cell-toolkit needs spdlog, following [this](https://brettviren.github.io/zio/install.html#org05744f0) to install.
+
+Older version does not need that. Checkout an older version:
+```bash
+cd /wcdo/src/wct
+git checkout -b dev 0.13.1
+```
+
+configure, build and install
+```bash
 wcdo-ups-wct-configure-source
 ./wcb -p --notests install
 ```
 
 output
 ```bash
-Checking for program 'rootcint'          : /cvmfs/larsoft.opensciencegrid.org/products/root/v6_12_06a/Linux64bit+3.10-2.17-e17-prof/bin/rootcint 
+Checking for program 'rootcint'          : /cvmfs/larsoft.opensciencegrid.org/products/root/v6_12_06a/Linux64bit+3.10-2.17-e19-prof/bin/rootcint 
 Checking for program 'rlibmap'           : not found 
 Checking for header Rtypes.h             : yes 
 Checking for program 'dpkg-architecture' : not found 
@@ -92,7 +103,7 @@ Waf: Leaving directory `/wcdo/src/wct/build'
 ```
 
 ```bash
-setup wirecell wctdev -q e17:prof
+setup wirecell wctdev -q e19:prof
 wcdo-wirecell-path default
 ```
 **Build larwirecell**
@@ -120,8 +131,8 @@ ups active | grep wirecell
 output
 
 ```bash
-larwirecell v08_05_08 -f Linux64bit+4.18-2.17 -q e17:prof -z /wcdo/src/mrb/localProducts_larsoft_v08_24_00_e17_prof
-wirecell wctdev -f Linux64bit+4.18-2.17-sl7-6 -q e17:prof -z /wcdo/lib/ups
+larwirecell v08_05_08 -f Linux64bit+4.18-2.17 -q e19:prof -z /wcdo/src/mrb/localProducts_larsoft_v08_24_00_e19_prof
+wirecell wctdev -f Linux64bit+4.18-2.17-sl7-6 -q e19:prof -z /wcdo/lib/ups
 ```
 
 
@@ -137,12 +148,12 @@ output
 ```bash
 "wirecell" "v0_12_3" "Linux64bit+2.6-2.12" "c2:debug" "" 
 "wirecell" "v0_12_3" "Darwin64bit+18" "c2:debug" "" 
-"wirecell" "v0_12_3" "Linux64bit+2.6-2.12" "e17:prof" "" 
-"wirecell" "v0_12_3" "Linux64bit+2.6-2.12" "debug:e17" "" 
+"wirecell" "v0_12_3" "Linux64bit+2.6-2.12" "e19:prof" "" 
+"wirecell" "v0_12_3" "Linux64bit+2.6-2.12" "debug:e19" "" 
 "wirecell" "v0_12_3" "Darwin64bit+17" "c2:prof" "" 
 "wirecell" "v0_12_3" "Darwin64bit+17" "c2:debug" "" 
-"wirecell" "v0_12_3" "Linux64bit+3.10-2.17" "debug:e17:py3" "" 
-"wirecell" "v0_12_3" "Linux64bit+3.10-2.17" "e17:prof:py3" "" 
+"wirecell" "v0_12_3" "Linux64bit+3.10-2.17" "debug:e19:py3" "" 
+"wirecell" "v0_12_3" "Linux64bit+3.10-2.17" "e19:prof:py3" "" 
 "wirecell" "v0_12_3" "Linux64bit+3.10-2.17" "c2:prof:py3" "" 
 "wirecell" "v0_12_3" "Linux64bit+3.10-2.17" "c2:debug:py3" ""
 ```
@@ -163,7 +174,7 @@ So far, you should have a workable singularity with wirecell + larsoft.
 # These are optional but required if wcdo-mrb-* commands are to be used.
 wcdo_mrb_project_name="larsoft"
 wcdo_mrb_project_version="v08_24_00"
-wcdo_mrb_project_quals="e17:prof"
+wcdo_mrb_project_quals="e19:prof"
 
 # Additional variables may be usefully set since this file was 
 # first generated.  
@@ -173,12 +184,12 @@ wcdo_mrb_project_quals="e17:prof"
 # source /cvmfs/larsoft.opensciencegrid.org/products/setup
 
 source /cvmfs/dune.opensciencegrid.org/products/dune/setup_dune.sh
-#setup dunetpc v08_24_00 -q e17:prof
+#setup dunetpc v08_24_00 -q e19:prof
 path-prepend $wcdo_ups_products PRODUCTS
 wcdo-mrb-init
 wcdo-ups-init
 
-setup wirecell wctdev -q e17:prof
+setup wirecell wctdev -q e19:prof
 export WIRECELL_PATH=/wcdo/src/wct/cfg:/wcdo/share/wirecell/data
 #optional: wcdo-wirecell-path default
 echo WIRECELL_PATH=$WIRECELL_PATH
@@ -210,7 +221,7 @@ alias vi='vim'
 # These are optional but required if wcdo-mrb-* commands are to be used.
 wcdo_mrb_project_name="larsoft"
 wcdo_mrb_project_version="v07_13_00"
-wcdo_mrb_project_quals="e17:prof"
+wcdo_mrb_project_quals="e19:prof"
 
 # Additional variables may be usefully set since this file was
 # first generated.  
@@ -219,12 +230,12 @@ wcdo_mrb_project_quals="e17:prof"
 # on each entry to the contaner.
 # source /cvmfs/larsoft.opensciencegrid.org/products/setup
 source /cvmfs/dune.opensciencegrid.org/products/dune/setup_dune.sh
-setup dunetpc v07_13_00 -q e17:prof
+setup dunetpc v07_13_00 -q e19:prof
 path-prepend $wcdo_ups_products PRODUCTS
 wcdo-mrb-init
 wcdo-ups-init
 
-setup wirecell wctdev -q e17:prof
+setup wirecell wctdev -q e19:prof
 export WIRECELL_PATH=/wcdo/src/wct/cfg:/wcdo/share/wirecell/data
 #optional: wcdo-wirecell-path default
 echo WIRECELL_PATH=$WIRECELL_PATH
