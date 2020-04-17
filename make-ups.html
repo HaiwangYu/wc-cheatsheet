@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ssi build shim | wc-cheatsheet</title>
+    <meta name="description" content="Welcome to wc-cheatsheet">
+    
+    
+    <link rel="preload" href="/wc-cheatsheet/assets/css/0.styles.6e230951.css" as="style"><link rel="preload" href="/wc-cheatsheet/assets/js/app.1922c60f.js" as="script"><link rel="preload" href="/wc-cheatsheet/assets/js/2.8cdd37ae.js" as="script"><link rel="preload" href="/wc-cheatsheet/assets/js/18.a49c10e4.js" as="script"><link rel="prefetch" href="/wc-cheatsheet/assets/js/10.9a34c3bb.js"><link rel="prefetch" href="/wc-cheatsheet/assets/js/11.a7db43c3.js"><link rel="prefetch" href="/wc-cheatsheet/assets/js/12.dff25f53.js"><link rel="prefetch" href="/wc-cheatsheet/assets/js/13.cbe100bd.js"><link rel="prefetch" href="/wc-cheatsheet/assets/js/14.2a97e355.js"><link rel="prefetch" href="/wc-cheatsheet/assets/js/15.18af2d61.js"><link rel="prefetch" href="/wc-cheatsheet/assets/js/16.1de43263.js"><link rel="prefetch" href="/wc-cheatsheet/assets/js/17.668d2a02.js"><link rel="prefetch" href="/wc-cheatsheet/assets/js/19.7df98b3f.js"><link rel="prefetch" href="/wc-cheatsheet/assets/js/20.646f7418.js"><link rel="prefetch" href="/wc-cheatsheet/assets/js/21.bbaf6c29.js"><link rel="prefetch" href="/wc-cheatsheet/assets/js/22.4bb8f28a.js"><link rel="prefetch" href="/wc-cheatsheet/assets/js/23.3816248f.js"><link rel="prefetch" href="/wc-cheatsheet/assets/js/24.17e855d4.js"><link rel="prefetch" href="/wc-cheatsheet/assets/js/3.562a7622.js"><link rel="prefetch" href="/wc-cheatsheet/assets/js/4.50ca0c84.js"><link rel="prefetch" href="/wc-cheatsheet/assets/js/5.61b1d687.js"><link rel="prefetch" href="/wc-cheatsheet/assets/js/6.98112c43.js"><link rel="prefetch" href="/wc-cheatsheet/assets/js/7.d55822ef.js"><link rel="prefetch" href="/wc-cheatsheet/assets/js/8.01eeec81.js"><link rel="prefetch" href="/wc-cheatsheet/assets/js/9.3f489b3f.js">
+    <link rel="stylesheet" href="/wc-cheatsheet/assets/css/0.styles.6e230951.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/wc-cheatsheet/" class="home-link router-link-active"><img src="/wc-cheatsheet/img/logo.png" alt="wc-cheatsheet" class="logo"> <span class="site-name can-hide">wc-cheatsheet</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/wc-cheatsheet/" class="nav-link">Main</a></div> <a href="https://github.com/HaiwangYu/wc-cheatsheet" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/wc-cheatsheet/" class="nav-link">Main</a></div> <a href="https://github.com/HaiwangYu/wc-cheatsheet" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/wc-cheatsheet/cuda-dev.html" class="sidebar-link">cuda dev</a></li><li><a href="/wc-cheatsheet/rootlogon.html" class="sidebar-link">rootlogon</a></li><li><a href="/wc-cheatsheet/build-libtorch.html" class="sidebar-link">build libtorch</a></li><li><a href="/wc-cheatsheet/docker-quick-start.html" class="sidebar-link">docker</a></li><li><a href="/wc-cheatsheet/singularity-with-cuda.html" class="sidebar-link">Singularity GPU support</a></li><li><a href="/wc-cheatsheet/hdf5.html" class="sidebar-link">hdf5</a></li><li><a href="/wc-cheatsheet/gdb.html" class="sidebar-link">gdb</a></li><li><a href="/wc-cheatsheet/git.html" class="sidebar-link">git</a></li><li><a href="/wc-cheatsheet/make-ups.html" class="active sidebar-link">ssi build shim</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/wc-cheatsheet/make-ups.html#repository" class="sidebar-link">repository</a></li><li class="sidebar-sub-header"><a href="/wc-cheatsheet/make-ups.html#brett-s-macro" class="sidebar-link">Brett's macro</a></li><li class="sidebar-sub-header"><a href="/wc-cheatsheet/make-ups.html#cmd" class="sidebar-link">cmd</a></li></ul></li><li><a href="/wc-cheatsheet/lar-cmd.html" class="sidebar-link">lar cmd</a></li><li><a href="/wc-cheatsheet/larsoft-update-with-new-release.html" class="sidebar-link">larsoft update with new release</a></li><li><a href="/wc-cheatsheet/sim-track-eval.html" class="sidebar-link">sim track eval</a></li><li><a href="/wc-cheatsheet/install-wirecell-sigularity.html" class="sidebar-link">Install wire-cell with singularity container</a></li><li><a href="/wc-cheatsheet/install-cvmfs-singularity.html" class="sidebar-link">Install singularity and cvmfs on Ubuntu 18.04</a></li><li><a href="/wc-cheatsheet/install-root.html" class="sidebar-link">install root</a></li><li><a href="/wc-cheatsheet/using-vscode.html" class="sidebar-link">vscode</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="ssi-build-shim"><a href="#ssi-build-shim" class="header-anchor">#</a> ssi build shim</h1> <h2 id="repository"><a href="#repository" class="header-anchor">#</a> repository</h2> <p>https://github.com/BNLIF/wcp-ssi-build</p> <h3 id="step-1-source-code"><a href="#step-1-source-code" class="header-anchor">#</a> step 1 source code</h3> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">time</span> ./bootstrap.sh /dune/app/users/yuhw/products/
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>time:</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>real	1m6.110s
+user	0m22.353s
+sys	0m3.491s
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>tree</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>products
+├── ssibuildshims
+│   ├── v1_04_13
+│   │   ├── bin
+│   │   │   ├── declare_product
+│   │   │   ├── define_basics
+│   │   │   ├── download_file
+│   │   │   ├── fake_declare_product
+│   │   │   ├── fix_macos_lib_symbols
+│   │   │   ├── get_os_platform
+│   │   │   ├── get_product_dir
+│   │   │   ├── get_ups_setup_dir
+│   │   │   ├── latest_version
+│   │   │   ├── make_distribution_tarball
+│   │   │   ├── make_source_code_base
+│   │   │   ├── make_source_code_distribution
+│   │   │   ├── make_source_code_tarball
+│   │   │   ├── ncores
+│   │   │   ├── process_qualifiers
+│   │   │   ├── setup_cmake
+│   │   │   ├── setup_python
+│   │   │   └── ssi_functions
+│   │   ├── templates
+│   │   │   └── bootstrap.sh.template
+│   │   └── ups
+│   │       └── ssibuildshims.table
+│   └── v1_04_13.version
+│       └── NULL_
+├── ssibuildshims-1.04.13-noarch.tar.bz2
+├── wcp
+│   └── v00_12_00
+│       ├── autobuild.sh
+│       ├── build_wcp.sh
+│       ├── tar
+│       │   └── wcp-v00_12_00.tar.bz2
+│       └── ups
+│           └── wcp.table
+└── wcp-00.12.00-source.tar.bz2
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br></div></div><h3 id="step-2-build"><a href="#step-2-build" class="header-anchor">#</a> step 2 build</h3> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">time</span> ./build_wcp.sh /dune/app/users/yuhw/products e17 prof
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>retuls:</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>Finished building wcp v00_12_00
+wcp is installed at wcp/v00_12_00/Linux64bit+2.6-2.12-e17-prof
+
+real	6m30.515s
+user	0m6.954s
+sys	0m3.230s
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>tree:</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>wcp
+├── v00_12_00
+│   ├── Linux64bit+2.6-2.12-e17-prof
+│   │   ├── bin
+│   │   ├── include
+│   │   ├── lib
+│   │   ├── lib64
+│   │   └── wcp-v00_12_00
+│   ├── autobuild.sh
+│   ├── build_wcp.sh
+│   ├── fakedb
+│   │   └── wcp
+│   ├── <span class="token function">tar</span>
+│   │   └── wcp-v00_12_00.tar.bz2
+│   └── ups
+│       └── wcp.table
+└── v00_12_00.version
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>mrb test build</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>mrb newDev -v v08_34_00 -q e17:prof
+<span class="token builtin class-name">source</span> localProducts_larsoft_v08_34_00_e17_prof/setup
+<span class="token builtin class-name">cd</span> <span class="token variable">$MRB_SOURCE</span>
+mrb g uboone_suite
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h1 id="other-method"><a href="#other-method" class="header-anchor">#</a> other method</h1> <h2 id="brett-s-macro"><a href="#brett-s-macro" class="header-anchor">#</a> Brett's macro</h2> <p>https://github.com/brettviren/waftools/blob/master/create-ups-product.sh</p> <h2 id="cmd"><a href="#cmd" class="header-anchor">#</a> cmd</h2> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>./waf-tools/create-ups-product.sh <span class="token punctuation">..</span>/products/ v00_10_00 e17:prof root boost
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/HaiwangYu/wc-cheatsheet/edit/master/make-ups.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">11/7/2019, 1:54:45 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/wc-cheatsheet/git.html" class="prev">git</a></span> <span class="next"><a href="/wc-cheatsheet/lar-cmd.html">lar cmd</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/wc-cheatsheet/assets/js/app.1922c60f.js" defer></script><script src="/wc-cheatsheet/assets/js/2.8cdd37ae.js" defer></script><script src="/wc-cheatsheet/assets/js/18.a49c10e4.js" defer></script>
+  </body>
+</html>
