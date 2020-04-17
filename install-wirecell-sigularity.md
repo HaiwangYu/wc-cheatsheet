@@ -4,7 +4,6 @@ This is a markdown version of Wenqiang's google doc [here](https://docs.google.c
 
 - larsoft version: `v08_47_00`
 - larwirecell version: `v08_12_06`
-- wirecell: `v0_12_3`
 - Check [this](https://cdcvs.fnal.gov/redmine/projects/larsoft/wiki/LArSoft_release_list) for the latest version
 
 ## A) singularity and cvmfs
@@ -46,24 +45,28 @@ wcdo-mrb-init # call mrb newDev if localsetup doesn't exist
 output
 ```bash
 IMPORTANT: You must type
-    source /wcdo/src/mrb/localProducts_larsoft_v08_24_00_e19_prof/setup
+    source /wcdo/src/mrb/localProducts_larsoft_v08_47_00_e19_prof/setup
 NOW and whenever you log in
 ```
 
-chekcout a feature branch
+chekcout a branch ()
 
 ```bash
 wcdo-mrb-add-source larwirecell v081206 v08_12_06
 ```
 output
 ```bash
-Summary of actions:
-- A new branch 'feature/v080508' was created, based on 'v080508-branch'
-- You are now on branch 'feature/v080508'
-
-Now, start committing on your feature. When done, use:
-
-     git flow feature finish v080508
+Cloning into 'larwirecell'...
+X11 forwarding request failed on channel 0
+remote: Enumerating objects: 32, done.
+remote: Counting objects: 100% (32/32), done.
+remote: Compressing objects: 100% (29/29), done.
+remote: Total 2686 (delta 10), reused 22 (delta 3), pack-reused 2654
+Receiving objects: 100% (2686/2686), 347.26 KiB | 19.29 MiB/s, done.
+Resolving deltas: 100% (1498/1498), done.
+INFO: CMakeLists.txt entry for product larwirecell already exists.
+wcdo-mrb-add-source: creating starting branch v081206 from v08_12_06
+Switched to a new branch 'v081206'
 ```
 
 **build wirecell**
@@ -131,7 +134,7 @@ ups active | grep wirecell
 output
 
 ```bash
-larwirecell v08_05_08 -f Linux64bit+4.18-2.17 -q e19:prof -z /wcdo/src/mrb/localProducts_larsoft_v08_24_00_e19_prof
+larwirecell v08_05_08 -f Linux64bit+4.18-2.17 -q e19:prof -z /wcdo/src/mrb/localProducts_larsoft_v08_47_00_e19_prof
 wirecell wctdev -f Linux64bit+4.18-2.17-sl7-6 -q e19:prof -z /wcdo/lib/ups
 ```
 
@@ -173,19 +176,12 @@ So far, you should have a workable singularity with wirecell + larsoft.
     
 # These are optional but required if wcdo-mrb-* commands are to be used.
 wcdo_mrb_project_name="larsoft"
-wcdo_mrb_project_version="v08_24_00"
+wcdo_mrb_project_version="v08_47_00"
 wcdo_mrb_project_quals="e19:prof"
 
-# Additional variables may be usefully set since this file was 
-# first generated.  
-
-# It is perhaps useful to end this with some command to be called 
-# on each entry to the contaner.
-# source /cvmfs/larsoft.opensciencegrid.org/products/setup
-
 source /cvmfs/dune.opensciencegrid.org/products/dune/setup_dune.sh
-#setup dunetpc v08_24_00 -q e19:prof
 path-prepend $wcdo_ups_products PRODUCTS
+#setup dunetpc ${wcdo_mrb_project_version} -q ${wcdo_mrb_project_quals}
 wcdo-mrb-init
 wcdo-ups-init
 
@@ -207,42 +203,6 @@ export PS1='[s]$(pwd)\n$'
 alias ls='ls --color=auto'
 alias ll='ls -lh'
 alias vi='vim'
-```
-
-**Wenqiang's**
-
-```bash
-#!/bin/bash
-
-# This is a local wcdo rc file for project myproj.
-# It was initally generated but is recomended for customizing by you, dear user.
-# It is included at the end of the main RC files.
-    
-# These are optional but required if wcdo-mrb-* commands are to be used.
-wcdo_mrb_project_name="larsoft"
-wcdo_mrb_project_version="v07_13_00"
-wcdo_mrb_project_quals="e19:prof"
-
-# Additional variables may be usefully set since this file was
-# first generated.  
-
-# It is perhaps useful to end this with some command to be called 
-# on each entry to the contaner.
-# source /cvmfs/larsoft.opensciencegrid.org/products/setup
-source /cvmfs/dune.opensciencegrid.org/products/dune/setup_dune.sh
-setup dunetpc v07_13_00 -q e19:prof
-path-prepend $wcdo_ups_products PRODUCTS
-wcdo-mrb-init
-wcdo-ups-init
-
-setup wirecell wctdev -q e19:prof
-export WIRECELL_PATH=/wcdo/src/wct/cfg:/wcdo/share/wirecell/data
-#optional: wcdo-wirecell-path default
-echo WIRECELL_PATH=$WIRECELL_PATH
-
-mrbsetenv
-mrbslp
-export FHICL_FILE_PATH=$WIRECELL_PATH:$FHICL_FILE_PATH
 ```
 
 Now please enjoy it: ./wcdo-myproj.sh
